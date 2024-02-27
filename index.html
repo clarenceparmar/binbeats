@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binaural Beats Generator</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .section {
+            background-color: beige;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Binaural Beats Generator</h1>
+    <div class="container">
+        <div class="section">
+            <h2>Binaural Beats</h2>
+            <button id="generateAndPlayBtn" onclick="binbeats()">Generate and Play Binaural Beats</button><br><br>
+            Binaural Beats Volume: <input type="range" min="0" max="100" value="50" onchange="setBinauralVolume(this.value)"> <br>
+            <button onclick="stopBinaural()">Stop</button><br><br>
+        </div>
+
+        <div class="section">
+            <h2>Isochronic Beats</h2>
+            <button onclick="isobeats()">Generate and Play Isochronic Beats</button>
+            <button onclick="stopIsochronic()">Stop Isochronic Beats</button><br><br>
+            Isochronic Beats Volume: <input type="range" min="0" max="100" value="50" onchange="setIsochronicVolume(this.value)"> <br>
+        </div>
+    </div>
+
+    <script src="./js/binbeats.js"></script>
+    <script src="./js/isobeats.js"></script>
+
+</body>
+</html>
